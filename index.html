@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI NEPAL</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <h1>AI Nepal</h1>
+            <div class="header-controls">
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+                <span class="control close"></span>
+            </div>
+            <button class="settings-btn" onclick="toggleSettings()">⚙️</button>
+        </div>
+        <div class="settings-panel" id="settingsPanel">
+            <label for="apiKey">API Key:</label>
+            <input type="text" id="apiKey" placeholder="Enter your OpenRouter API key">
+            <button onclick="saveSettings()">Save</button>
+        </div>
+        <div class="terminal-body" id="chatBody">
+            <div class="message ai-message">
+                <span class="prompt">AI@Nepal:~$</span> Welcome to AI NEPAL, your professional AI assistant. How may I assist you today?
+            </div>
+        </div>
+        <div class="terminal-footer">
+            <div class="input-wrapper">
+                <span class="prompt">User@Nepal:~$</span>
+                <textarea id="userInput" placeholder="Enter your query..." rows="1"></textarea>
+            </div>
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
